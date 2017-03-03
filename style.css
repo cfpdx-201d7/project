@@ -55,6 +55,8 @@ a {
 h1 {
   font-size: 200%;
   text-align: center;
+  margin: .75em 0;
+  font-weight: bold;
 }
 
 #hero_image {
@@ -72,6 +74,7 @@ h1 {
 
 #game_main p {
   padding: 0 2em;
+  margin-bottom: 1em;
   font-family: Courier New, Courier, monospace;
   font-size: 20px;
 }
@@ -216,12 +219,13 @@ footer {
   width: 200px;
   height: 50px;
   font-family: Helvetica;
-  font-size: 30px;
-  color: slategray;
+  font-size: 20px;
+  color: #000;
   background-color: lightgrey;
   border-style: solid;
   border-color:cornflowerblue;
   border-radius: 10px;
+  padding: .2em;
 }
 
 .button:hover {
@@ -243,7 +247,9 @@ footer {
   font-size: 15px;
 }
 
-
+#results_text {
+  margin-top: 1em;
+}
 
 
 
