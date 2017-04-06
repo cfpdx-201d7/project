@@ -10,6 +10,8 @@ if (loadName === null) {
 }
 
 if (loadScore === null) {
+  // since you're using this node in both the if and the else if it could have been
+  // declared above the conditional
   var zeroComment = document.getElementById('zero_score_text');
   zeroComment.textContent = ('Player, you got zero correct answers. Come to r&d immediately for some musical knowledge!');
 } else if (loadScore == 0) {

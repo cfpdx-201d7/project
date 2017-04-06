@@ -21,6 +21,21 @@ var media = [
   },
   {
     song: 'songs/01 Icky Thump (mp3cut.net).mp3',
+    // if you take a look at the repetition in your choice arrays and the fact
+    // that each index actually has a specific purpose you can see that this is
+    // a perfect use case for an object! More specifically a constructor/class
+    // that way you can ask the choices for their data by name rather than having
+    // to remember what index the data you want is at. You could even keep track of
+    // which one is correct.
+    //
+    // so something like:
+    // function Choice(answer, album, artist, isCorrect) {
+    //   this.answer = answer;
+    //   this.artist = artist;
+    //   this.album = album;
+    //   this.isCorrect = isCorrect;
+    // }
+    //
     choice1: ['images/ickythump.jpeg', 'Icky Thump', 'The White Stripes'],
     choice2: ['images/deathfromabove.jpg', 'You\'re a Woman, I\'m a Machine', 'Death From Above 1979'],
     choice3: ['images/blackkeysmagicpotion.jpg', 'Magic Potion', 'The White Stripes'],
@@ -128,7 +143,10 @@ function nextClickHandler() {
 function generateRandomNumber(max){
   return Math.floor(Math.random() * max);
 }
-
+// in this particular case you're always only looking through 4 images
+// which means that your final set will always include the same 4 numbers
+// just in random order. Given that this actually would have been a good
+// place to shuffle the numbers rather than generate random ones.
 function displayQuiz() {
   audio.src = media[counter].song;
 

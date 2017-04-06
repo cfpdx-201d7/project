@@ -12,6 +12,10 @@ function playHandler(event) { //Sets storage for username and email
 
   //form name validation
   if (!nameDomElement.value) {
+    // Cool way to do form validation. Typically we want to try and keep
+    // styling out of our scripts wherever possible. The best way to handle
+    // things like this is to have a class set for errors in your CSS somewhere
+    // and add them via classList
     nameDomElement.style.outline = '2px solid #f00';
     event.preventDefault();
 

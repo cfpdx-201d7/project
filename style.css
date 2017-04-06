@@ -12,7 +12,7 @@ body {
 }
 header {
   max-width: 960px;
-  background: linear-gradient(#C3C5C6 30%, white); 
+  background: linear-gradient(#C3C5C6 30%, white);
   }
 
 nav {
@@ -25,7 +25,7 @@ li {
     display: inline;
 }
 
-.nav-button {   
+.nav-button {
   height: 125px;
   width: 125px;
   border: none;
@@ -35,7 +35,14 @@ li {
 .nav-button:hover {
   transform: rotate(1080deg);
 }
-
+/* You have the same value for text-align in several places
+   when you find that the way to abstract that out is to use
+   a comma separated list of selectors
+   like:
+     h1, tr, #table-content, .nav_text, figcaption, footer {
+       text-align: center;
+     }
+   */
 .nav_text {
   text-align: center;
   color: black;
@@ -143,6 +150,9 @@ input[name="submit"]:hover {
   background:blue;
 }
 
+/* I don't know exactly where this is being used but it's pretty likely
+that you aren't going to end up with clear and float on the same selector.
+*/
 #gameboard {
   float: left;
   clear: both;
@@ -197,7 +207,9 @@ img {
   margin-top: 5px;
   height: 60px;
   width: 60px;
-  margin-bottom: -5px;    
+  /* As a general practice avoid negative margins, though here I don't think
+  there was another way you could have acheived the same thing so: good job!*/
+  margin-bottom: -5px;
 }
 
 footer {
@@ -206,7 +218,7 @@ footer {
   text-align: center;
   font-size: 20px;
   margin: 0px 0px 40px 0px;
-  background: linear-gradient(white, #C3C5C6 70%); 
+  background: linear-gradient(white, #C3C5C6 70%);
   height: 130px;
   margin-top:20px;
 }
@@ -236,7 +248,7 @@ footer {
     height: 100%;
     display: block;
     text-align: center;
-    margin: .75em auto; 
+    margin: .75em auto;
 }
 
 .cursor {
